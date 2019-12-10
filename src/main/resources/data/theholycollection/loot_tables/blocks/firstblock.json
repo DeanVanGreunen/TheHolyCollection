@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:copy_name",
-              "source": "block_entity"
+                "source": "block_entity"
             },
             {
               "function": "minecraft:copy_nbt",
