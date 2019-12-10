@@ -47,16 +47,14 @@ public class FirstBlockTile extends TileEntity implements ITickableTileEntity, I
         if (counter > 0) {
             counter--;
             if (counter <= 0) {
-                energy.ifPresent(e -> {
-                    ((CustomEnergyStorage) e).addEnergy(1000);
-                });
+                energy.ifPresent(e -> ((CustomEnergyStorage) e).addEnergy(1000));
             }
         } else {
             handler.ifPresent(h -> {
                 ItemStack stack = h.getStackInSlot(0);
                 if (stack.getItem() == Items.DIAMOND) {
                     h.extractItem(0, 1, false);
-                    counter = 20;
+                    counter = 10;
                 }
             });
         }
@@ -64,35 +62,44 @@ public class FirstBlockTile extends TileEntity implements ITickableTileEntity, I
 
     // NBT READ/WRITE
 
+
     @Override
     public void read(CompoundNBT tag) {
         CompoundNBT invTag = tag.getCompound("inv");
-        handler.ifPresent( h -> ((INBTSerializable<CompoundNBT>)h).deserializeNBT(invTag));
+        handler.ifPresent(h -> ((INBTSerializable<CompoundNBT>) h).deserializeNBT(invTag));
         CompoundNBT energyTag = tag.getCompound("energy");
-        energy.ifPresent( h -> ((INBTSerializable<CompoundNBT>)h).deserializeNBT(energyTag));
+        energy.ifPresent(h -> ((INBTSerializable<CompoundNBT>) h).deserializeNBT(energyTag));
+
+        counter = tag.getInt("counter");
         super.read(tag);
     }
 
     @Override
     public CompoundNBT write(CompoundNBT tag) {
         handler.ifPresent(h -> {
-            CompoundNBT compound = createHandler().serializeNBT();
+            CompoundNBT compound = ((INBTSerializable<CompoundNBT>) h).serializeNBT();
             tag.put("inv", compound);
         });
         energy.ifPresent(h -> {
-            CompoundNBT compound = createHandler().serializeNBT();
+            CompoundNBT compound = ((INBTSerializable<CompoundNBT>) h).serializeNBT();
             tag.put("energy", compound);
         });
+
+        tag.putInt("counter", counter);
         return super.write(tag);
     }
 
-    // WORLD INTERACTIONS
-
-    private ItemStackHandler createHandler() {
+    private IItemHandler createHandler() {
         return new ItemStackHandler(1) {
+
+            @Override
+            protected void onContentsChanged(int slot) {
+                markDirty();
+            }
+
             @Override
             public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-                return (stack.getItem() == Items.DIAMOND);
+                return stack.getItem() == Items.DIAMOND;
             }
 
             @Nonnull
@@ -107,31 +114,29 @@ public class FirstBlockTile extends TileEntity implements ITickableTileEntity, I
     }
 
     private IEnergyStorage createEnergy() {
-        return new EnergyStorage(100000, 0);
+        return new CustomEnergyStorage(100000, 0);
     }
 
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
-        if(cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY && side != Direction.NORTH){
-            //Deny Capability on north side of block (front face)
+        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY && side != Direction.NORTH) {
             return handler.cast();
         }
-        if(cap == CapabilityEnergy.ENERGY && side != Direction.NORTH){
+        if (cap == CapabilityEnergy.ENERGY) {
             return energy.cast();
         }
         return super.getCapability(cap, side);
     }
 
-
     @Override
-    public ITextComponent getDisplayName(){
+    public ITextComponent getDisplayName() {
         return new StringTextComponent(getType().getRegistryName().getPath());
     }
 
     @Nullable
     @Override
-    public Container createMenu(int i, PlayerInventory inv, PlayerEntity playerEntity){
-        return new FirstBlockContainer(i, world, pos, inv, playerEntity);
+    public Container createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
+        return new FirstBlockContainer(i, world, pos, playerInventory, playerEntity);
     }
 }
