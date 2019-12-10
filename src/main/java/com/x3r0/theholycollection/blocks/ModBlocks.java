@@ -1,0 +1,20 @@
+package com.x3r0.theholycollection.blocks;
+
+import com.x3r0.theholycollection.blocks.firstblock.FirstBlock;
+import com.x3r0.theholycollection.blocks.firstblock.FirstBlockContainer;
+import com.x3r0.theholycollection.blocks.firstblock.FirstBlockTile;
+import net.minecraft.inventory.container.ContainerType;
+import net.minecraft.tileentity.TileEntityType;
+import net.minecraftforge.registries.ObjectHolder;
+
+public class ModBlocks {
+    @ObjectHolder("theholycollection:firstblock")
+    public static FirstBlock FIRSTBLOCK;
+
+    @ObjectHolder("theholycollection:firstblock")
+    public static TileEntityType<FirstBlockTile> FIRSTBLOCK_TILE;
+
+    @ObjectHolder("theholycollection:firstblock")
+    public static ContainerType<FirstBlockContainer> FIRSTBLOCK_CONTAINER;
+}
+

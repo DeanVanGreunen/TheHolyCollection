@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures":{
+    "north": "theholycollection:block/firstblock_front",
+    "south": "theholycollection:block/firstblock",
+    "east": "theholycollection:block/firstblock",
+    "west": "theholycollection:block/firstblock",
+    "up": "theholycollection:block/firstblock",
+    "down": "theholycollection:block/firstblock"
+  }
+}

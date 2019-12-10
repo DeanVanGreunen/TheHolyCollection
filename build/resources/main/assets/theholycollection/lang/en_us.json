@@ -1,0 +1,15 @@
+{
+  "_comment": "Blocks",
+  "block.theholycollection.firstblock": "First Block",
+
+  "_comment": "Items",
+  "item.theholycollection.firstblock": "First Item",
+
+  "_comment": "Creative Tabs",
+  "itemGroup.theholycollection": "The Holy Collection",
+
+  "_comment": "Keys",
+
+
+  "_comment": "Messages"
+}
