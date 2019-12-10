@@ -55,7 +55,7 @@ public class Config {
         FIRSTBLOCK_SEND = COMMON_BUILDER.comment("Power generation to send per tick")
                 .defineInRange("send", 100, 0, Integer.MAX_VALUE);
         FIRSTBLOCK_TICKS = COMMON_BUILDER.comment("Ticks per diamond")
-                .defineInRange("ticks", 20, 0, Integer.MAX_VALUE);
+                .defineInRange("ticks", 15, 0, Integer.MAX_VALUE);
 
         COMMON_BUILDER.pop();
     }
