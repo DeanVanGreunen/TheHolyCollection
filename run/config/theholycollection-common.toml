@@ -1,0 +1,19 @@
+
+#Power settings
+[power]
+
+	#FirstBlock settings
+	[power.firstblock]
+		#Ticks per diamond
+		#Range: > 0
+		ticks = 15
+		#Maximum power for the FirstBlock generator
+		#Range: > 0
+		maxPower = 100000
+		#Power generation per diamond
+		#Range: > 0
+		generate = 1000
+		#Power generation to send per tick
+		#Range: > 0
+		send = 100
+
