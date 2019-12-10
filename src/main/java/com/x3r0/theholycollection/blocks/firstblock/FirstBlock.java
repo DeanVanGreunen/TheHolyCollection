@@ -9,6 +9,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.ItemStack;
+import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
@@ -23,6 +24,9 @@ import net.minecraftforge.fml.network.NetworkHooks;
 import javax.annotation.Nullable;
 
 public class FirstBlock extends Block {
+
+    public static final BooleanProperty HASENERGY = BooleanProperty.create("hasenergy");
+
     public FirstBlock() {
         super(Properties.create(Material.IRON)
                 .sound(SoundType.METAL)
@@ -48,12 +52,19 @@ public class FirstBlock extends Block {
 
     @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(BlockStateProperties.FACING);
+        builder.add(BlockStateProperties.FACING, BlockStateProperties.POWERED, HASENERGY);
     }
 
     @Override
     public boolean hasTileEntity(BlockState state) {
         return true;
+    }
+
+    @Override
+    public int getLightValue(BlockState state) {
+        if(state.get(BlockStateProperties.POWERED)) return super.getLightValue(state);
+        if(state.get(HASENERGY)) return super.getLightValue(state);
+        return 0;
     }
 
     @Nullable

@@ -2,6 +2,7 @@ package com.x3r0.theholycollection.blocks.firstblock;
 
 import com.x3r0.theholycollection.Config;
 import com.x3r0.theholycollection.tools.CustomEnergyStorage;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
@@ -9,6 +10,8 @@ import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
@@ -25,7 +28,6 @@ import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.x3r0.theholycollection.blocks.ModBlocks.FIRSTBLOCK_TILE;
@@ -44,6 +46,9 @@ public class FirstBlockTile extends TileEntity implements ITickableTileEntity, I
 
     @Override
     public void tick() {
+        if (world.isRemote) {
+            return;
+        }
         //Runs Twice, Once on Client and once on Server
         if (counter > 0) {
             counter--;
@@ -51,7 +56,8 @@ public class FirstBlockTile extends TileEntity implements ITickableTileEntity, I
                 energy.ifPresent(e -> ((CustomEnergyStorage) e).addEnergy(Config.FIRSTBLOCK_GENERATE.get()));
             }
             markDirty(); //counter value changed
-        } else {
+        }
+        if(counter <= 0) {
             handler.ifPresent(h -> {
                 ItemStack stack = h.getStackInSlot(0);
                 if (stack.getItem() == Items.DIAMOND) {
@@ -59,6 +65,16 @@ public class FirstBlockTile extends TileEntity implements ITickableTileEntity, I
                     counter = Config.FIRSTBLOCK_TICKS.get();
                     markDirty();
                 }
+            });
+        }
+
+        BlockState blockState = world.getBlockState(pos);
+        if (blockState.get(BlockStateProperties.POWERED) != counter > 0) {
+            world.setBlockState(pos, blockState.with(BlockStateProperties.POWERED, counter > 0), 3);
+        } else if (blockState.get(FirstBlock.HASENERGY) != counter > 0){
+            energy.ifPresent(energy -> {
+                AtomicInteger capacity = new AtomicInteger(energy.getEnergyStored());
+                world.setBlockState(pos, blockState.with(FirstBlock.HASENERGY, capacity.get() > 0), 3);
             });
         }
 

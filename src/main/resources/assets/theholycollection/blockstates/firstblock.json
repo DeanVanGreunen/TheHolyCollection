@@ -1,10 +1,28 @@
 {
   "variants": {
-    "facing=north": { "model": "theholycollection:block/firstblock" },
-    "facing=south": { "model": "theholycollection:block/firstblock", "y": 180 },
-    "facing=west":  { "model": "theholycollection:block/firstblock", "y": 270 },
-    "facing=east":  { "model": "theholycollection:block/firstblock", "y": 90 },
-    "facing=up":  { "model": "theholycollection:block/firstblock", "x": -90 },
-    "facing=down":  { "model": "theholycollection:block/firstblock", "x": 90 }
+    "facing=north,powered=false,hasenergy=false": { "model": "theholycollection:block/firstblock" },
+    "facing=south,powered=false,hasenergy=false": { "model": "theholycollection:block/firstblock", "y": 180 },
+    "facing=west,powered=false,hasenergy=false":  { "model": "theholycollection:block/firstblock", "y": 270 },
+    "facing=east,powered=false,hasenergy=false":  { "model": "theholycollection:block/firstblock", "y": 90 },
+    "facing=up,powered=false,hasenergy=false":  { "model": "theholycollection:block/firstblock", "x": -90 },
+    "facing=down,powered=false,hasenergy=false":  { "model": "theholycollection:block/firstblock", "x": 90 },
+    "facing=north,powered=true,hasenergy=false": { "model": "theholycollection:block/firstblock_powered" },
+    "facing=south,powered=true,hasenergy=false": { "model": "theholycollection:block/firstblock_powered", "y": 180 },
+    "facing=west,powered=true,hasenergy=false":  { "model": "theholycollection:block/firstblock_powered", "y": 270 },
+    "facing=east,powered=true,hasenergy=false":  { "model": "theholycollection:block/firstblock_powered", "y": 90 },
+    "facing=up,powered=true,hasenergy=false":  { "model": "theholycollection:block/firstblock_powered", "x": -90 },
+    "facing=down,powered=true,hasenergy=false":  { "model": "theholycollection:block/firstblock_powered", "x": 90 },
+    "facing=north,powered=true,hasenergy=true": { "model": "theholycollection:block/firstblock_powered" },
+    "facing=south,powered=true,hasenergy=true": { "model": "theholycollection:block/firstblock_powered", "y": 180 },
+    "facing=west,powered=true,hasenergy=true":  { "model": "theholycollection:block/firstblock_powered", "y": 270 },
+    "facing=east,powered=true,hasenergy=true":  { "model": "theholycollection:block/firstblock_powered", "y": 90 },
+    "facing=up,powered=true,hasenergy=true":  { "model": "theholycollection:block/firstblock_powered", "x": -90 },
+    "facing=down,powered=true,hasenergy=true":  { "model": "theholycollection:block/firstblock_powered", "x": 90 },
+    "facing=north,powered=false,hasenergy=true": { "model": "theholycollection:block/firstblock_hasenergy" },
+    "facing=south,powered=false,hasenergy=true": { "model": "theholycollection:block/firstblock_hasenergy", "y": 180 },
+    "facing=west,powered=false,hasenergy=true":  { "model": "theholycollection:block/firstblock_hasenergy", "y": 270 },
+    "facing=east,powered=false,hasenergy=true":  { "model": "theholycollection:block/firstblock_hasenergy", "y": 90 },
+    "facing=up,powered=false,hasenergy=true":  { "model": "theholycollection:block/firstblock_hasenergy", "x": -90 },
+    "facing=down,powered=false,hasenergy=true":  { "model": "theholycollection:block/firstblock_hasenergy", "x": 90 }
   }
 }
