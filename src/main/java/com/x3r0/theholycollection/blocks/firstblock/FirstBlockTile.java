@@ -8,7 +8,6 @@ import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.nbt.INBT;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
@@ -18,7 +17,6 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.CapabilityEnergy;
-import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
@@ -26,6 +24,8 @@ import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.x3r0.theholycollection.blocks.ModBlocks.FIRSTBLOCK_TILE;
 
@@ -49,15 +49,40 @@ public class FirstBlockTile extends TileEntity implements ITickableTileEntity, I
             if (counter <= 0) {
                 energy.ifPresent(e -> ((CustomEnergyStorage) e).addEnergy(1000));
             }
+            markDirty(); //counter value changed
         } else {
             handler.ifPresent(h -> {
                 ItemStack stack = h.getStackInSlot(0);
                 if (stack.getItem() == Items.DIAMOND) {
                     h.extractItem(0, 1, false);
                     counter = 10;
+                    markDirty();
                 }
             });
         }
+
+        sendOutPower();
+    }
+
+    private void sendOutPower() {
+        energy.ifPresent(energy -> {
+            AtomicInteger capacity = new AtomicInteger(energy.getEnergyStored());
+            if (capacity.get() > 0) {
+                for (Direction direction : Direction.values()) {
+                    TileEntity te = world.getTileEntity(pos.offset(direction));
+                    if (te != null) {
+                        te.getCapability(CapabilityEnergy.ENERGY, direction).ifPresent(handler -> {
+                            if (handler.canReceive()) {
+                                int recieved = handler.receiveEnergy(Math.min(capacity.get(), 100), false);
+                                capacity.addAndGet(-recieved);
+                                ((CustomEnergyStorage)energy).consumeEnergy(recieved);
+                                markDirty();
+                            }
+                        });
+                    }
+                }
+            }
+        });
     }
 
     // NBT READ/WRITE
