@@ -5,4 +5,7 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ModItems {
     @ObjectHolder("theholycollection:firstitem")
     public static FirstItem FIRSTITEM;
+
+    @ObjectHolder("theholycollection:weirdmob_egg")
+    public static WeirdMobEggItem WEIRDMOB_EGG;
 }

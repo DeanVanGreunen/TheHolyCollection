@@ -5,15 +5,21 @@ import com.x3r0.theholycollection.blocks.firstblock.FirstBlock;
 import com.x3r0.theholycollection.blocks.firstblock.FirstBlockContainer;
 import com.x3r0.theholycollection.blocks.firstblock.FirstBlockTile;
 import com.x3r0.theholycollection.blocks.ModBlocks;
+import com.x3r0.theholycollection.entities.WeirdMobEntity;
 import com.x3r0.theholycollection.items.FirstItem;
+import com.x3r0.theholycollection.items.WeirdMobEggItem;
 import com.x3r0.theholycollection.setup.ClientProxy;
 import com.x3r0.theholycollection.setup.IProxy;
 import com.x3r0.theholycollection.setup.ModSetup;
 import com.x3r0.theholycollection.setup.ServerProxy;
 import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityClassification;
+import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.MinecraftForge;
@@ -97,6 +103,7 @@ public class TheHolyCollection {
 
             event.getRegistry().register(new FirstBlockItem());
             event.getRegistry().register(new FirstItem());
+            event.getRegistry().register(new WeirdMobEggItem());
         }
         @SubscribeEvent
         public static void onTileEntityRegistry(final RegistryEvent.Register<TileEntityType<?>> event) {
@@ -113,6 +120,15 @@ public class TheHolyCollection {
                         BlockPos pos = data.readBlockPos();
                         return new FirstBlockContainer(windowId,TheHolyCollection.proxy.getClientWorld(), pos, inv, TheHolyCollection.proxy.getClientPayer());
                     }).setRegistryName("firstblock"));
+        }
+
+
+        @SubscribeEvent
+        public static void onEntityRegistry(final RegistryEvent.Register<EntityType<?>> event) {
+            event.getRegistry().register(EntityType.Builder.create(WeirdMobEntity::new, EntityClassification.CREATURE)
+            .size(1,1)
+            .setShouldReceiveVelocityUpdates(false)
+            .build("weirdmob").setRegistryName(TheHolyCollection.MODID, "weirdmob"));
         }
     }
 }
