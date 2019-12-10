@@ -26,7 +26,7 @@ public class FirstBlockScreen extends ContainerScreen<FirstBlockContainer> {
 
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        //drawString(Minecraft.getInstance().fontRenderer, "Energy: " /*+ container.getEnergy()*/, 10, 10, 0xffffff);
+        drawString(Minecraft.getInstance().fontRenderer, "Energy: " + container.getEnergy(), 10, 10, 0xffffff);
     }
 
     @Override
