@@ -51,6 +51,19 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
         return LootTable.builder().addLootPool(builder);
     }
 
+    protected LootTable.Builder createStandardTable(String name, Block block) {
+        LootPool.Builder builder = LootPool.builder()
+                .name(name)
+                .rolls(ConstantRange.of(1))
+                .addEntry(ItemLootEntry.builder(block)
+                        .acceptFunction(CopyName.builder(CopyName.Source.BLOCK_ENTITY))
+                        .acceptFunction(CopyNbt.func_215881_a(CopyNbt.Source.BLOCK_ENTITY))
+                            .acceptFunction(SetContents.func_215920_b()
+                                .func_216075_a(DynamicLootEntry.func_216162_a(new ResourceLocation("minecraft", "contents"))))
+                );
+        return LootTable.builder().addLootPool(builder);
+    }
+
     @Override
     public void act(DirectoryCache cache) {
         addTables();

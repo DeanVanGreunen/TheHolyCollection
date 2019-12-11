@@ -1,6 +1,8 @@
 package com.x3r0.theholycollection;
 
+import com.x3r0.theholycollection.blockitems.FancyBlockItem;
 import com.x3r0.theholycollection.blockitems.FirstBlockItem;
+import com.x3r0.theholycollection.blocks.fancyblock.FancyBlock;
 import com.x3r0.theholycollection.blocks.firstblock.FirstBlock;
 import com.x3r0.theholycollection.blocks.firstblock.FirstBlockContainer;
 import com.x3r0.theholycollection.blocks.firstblock.FirstBlockTile;
@@ -18,6 +20,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.tileentity.TileEntityType;
@@ -95,12 +98,14 @@ public class TheHolyCollection {
             LOGGER.info("Registering Blocks");
 
             event.getRegistry().register(new FirstBlock());
+            event.getRegistry().register(new FancyBlock());
         }
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             LOGGER.info("Registering Items");
             LOGGER.info("Registering BlockItems");
 
+            event.getRegistry().register(new FancyBlockItem());
             event.getRegistry().register(new FirstBlockItem());
             event.getRegistry().register(new FirstItem());
             event.getRegistry().register(new WeirdMobEggItem());

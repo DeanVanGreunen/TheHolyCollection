@@ -12,5 +12,6 @@ public class LootTables extends BaseLootTableProvider {
     @Override
     protected void addTables() {
         lootTables.put(ModBlocks.FIRSTBLOCK, createStandardTableInvEnergy("firstblock", ModBlocks.FIRSTBLOCK));
+        lootTables.put(ModBlocks.FIRSTBLOCK, createStandardTable("fancyblock", ModBlocks.FANCYBLOCK));
     }
 }

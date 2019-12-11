@@ -1,5 +1,7 @@
 package com.x3r0.theholycollection.blocks;
 
+import com.x3r0.theholycollection.blocks.fancyblock.FancyBlock;
+import com.x3r0.theholycollection.blocks.fancyblock.FancyBlockTile;
 import com.x3r0.theholycollection.blocks.firstblock.FirstBlock;
 import com.x3r0.theholycollection.blocks.firstblock.FirstBlockContainer;
 import com.x3r0.theholycollection.blocks.firstblock.FirstBlockTile;
@@ -16,5 +18,12 @@ public class ModBlocks {
 
     @ObjectHolder("theholycollection:firstblock")
     public static ContainerType<FirstBlockContainer> FIRSTBLOCK_CONTAINER;
+
+    @ObjectHolder("theholycollection:fancyblock")
+    public static FancyBlock FANCYBLOCK;
+
+
+    @ObjectHolder("theholycollection:fancyblock")
+    public static TileEntityType<FancyBlockTile> FANCYBLOCK_TILE;
 }
 
