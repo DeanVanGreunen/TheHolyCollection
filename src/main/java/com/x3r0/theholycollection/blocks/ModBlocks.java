@@ -22,7 +22,6 @@ public class ModBlocks {
     @ObjectHolder("theholycollection:fancyblock")
     public static FancyBlock FANCYBLOCK;
 
-
     @ObjectHolder("theholycollection:fancyblock")
     public static TileEntityType<FancyBlockTile> FANCYBLOCK_TILE;
 }

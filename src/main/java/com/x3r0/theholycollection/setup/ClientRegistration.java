@@ -27,7 +27,7 @@ public class ClientRegistration {
             return;
         }
         event.addSprite(new ResourceLocation(TheHolyCollection.MODID, "block/fancyblock"));
-    }   
+    }
 
     @SubscribeEvent
     public static void onModelBake(ModelBakeEvent event){
