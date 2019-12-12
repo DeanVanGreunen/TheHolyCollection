@@ -9,6 +9,7 @@ import com.x3r0.theholycollection.blocks.firstblock.FirstBlockTile;
 import com.x3r0.theholycollection.blocks.ModBlocks;
 import com.x3r0.theholycollection.entities.WeirdMobEntity;
 import com.x3r0.theholycollection.items.FirstItem;
+import com.x3r0.theholycollection.items.WaterSplitterItem;
 import com.x3r0.theholycollection.items.WeirdMobEggItem;
 import com.x3r0.theholycollection.setup.ClientProxy;
 import com.x3r0.theholycollection.setup.IProxy;
@@ -109,7 +110,9 @@ public class TheHolyCollection {
             event.getRegistry().register(new FirstBlockItem());
             event.getRegistry().register(new FirstItem());
             event.getRegistry().register(new WeirdMobEggItem());
+            event.getRegistry().register(new WaterSplitterItem());
         }
+
         @SubscribeEvent
         public static void onTileEntityRegistry(final RegistryEvent.Register<TileEntityType<?>> event) {
             LOGGER.info("Registering TileEntities");

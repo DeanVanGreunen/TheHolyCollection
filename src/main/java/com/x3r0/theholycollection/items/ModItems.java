@@ -8,4 +8,7 @@ public class ModItems {
 
     @ObjectHolder("theholycollection:weirdmob_egg")
     public static WeirdMobEggItem WEIRDMOB_EGG;
+
+    @ObjectHolder("theholycollection:watersplitteritem")
+    public static WaterSplitterItem WATERSPLITERITEM;
 }
