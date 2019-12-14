@@ -66,35 +66,55 @@ public class WaterSplitterItem extends Item {
         switch (facing){
             case NORTH:
                 for (int y = Y_MIN; y < Y_MAX; y++) {
-                    for (int z = Z_MIN; z < Z_MAX; z++) {
-                        for(int x = X)
+                    for (int z = Z_SOUTH_MAX; z > Z_SOUTH_MIN; z--) {
+                        for (int x = X_MIN; x < X_MAX; x++) {
+                            RemoveWater( x, y, z, blockpos, world);
+                        }
                     }
                 }
                 break;
             case SOUTH:
+                for (int y = Y_MIN; y < Y_MAX; y++) {
+                    for (int z = Z_SOUTH_MIN; z < Z_SOUTH_MAX; z++) {
+                        for (int x = X_MIN; x < X_MAX; x++) {
+                            RemoveWater( x, y, z, blockpos, world);
+                        }
+                    }
+                }
                 break;
             case EAST:
+                for (int y = Y_MIN; y < Y_MAX; y++) {
+                    for (int z = Z_MIN; z < Z_MAX; z++) {
+                        for (int x = X_EAST_MIN; x < X_EAST_MAX; x++) {
+                            RemoveWater( x, y, z, blockpos, world);
+                        }
+                    }
+                }
                 break;
             case WEST:
+                for (int y = Y_MIN; y < Y_MAX; y++) {
+                    for (int z = Z_MIN; z < Z_MAX; z++) {
+                        for (int x = X_EAST_MAX; x > X_EAST_MIN; x--) {
+                            RemoveWater( x, y, z, blockpos, world);
+                        }
+                    }
+                }
                 break;
         }
         //-z = north
         //+x = east
         //-x = west
         //z = south
-        for (int x = -8; x < 8; x++) {
-            for (int y = -8; y < 8; y++) {
-                for (int z = -8; z < 8; z++) {
-                    BlockPos pos = new BlockPos(blockpos.getX() + x, blockpos.getY() + y, blockpos.getZ() + z);
-                    BlockState state = world.getBlockState(pos);
-                    if(state.getBlock() == Blocks.WATER) {
-                        world.setBlockState(pos,Blocks.AIR.getDefaultState(), 3);
-                    }
-                }
-            }
+        return new ActionResult(ActionResultType.SUCCESS, itemstack1);
+    }
+
+    public void RemoveWater(int x, int y, int z, BlockPos blockpos, World world){
+        BlockPos pos = new BlockPos(blockpos.getX() + x, blockpos.getY() + y, blockpos.getZ() + z);
+        BlockState state = world.getBlockState(pos);
+        if(state.getBlock() == Blocks.WATER) {
+            world.setBlockState(pos,Blocks.AIR.getDefaultState(), 3);
         }
         world.markChunkDirty(pos, null);
-        return new ActionResult(ActionResultType.SUCCESS, itemstack1);
     }
 
     /*public boolean hasWater(World world, BlockPos pos){
