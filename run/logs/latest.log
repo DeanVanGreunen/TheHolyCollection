@@ -1,159 +1,65 @@
-[13Dec2019 09:13:59.203] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20190829.143755, --fml.mcVersion, 1.14.4, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 28.1.61, --version, MOD_DEV, --assetIndex, 1.14, --assetsDir, D:\Gradle\caches\forge_gradle\assets, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
-[13Dec2019 09:13:59.219] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 4.1.0+62+5bfa59b starting: java version 1.8.0_231 by Oracle Corporation
-[13Dec2019 09:14:00.667] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
-[13Dec2019 09:14:02.442] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, D:\Gradle\caches\forge_gradle\assets, --assetIndex, 1.14, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
-[13Dec2019 09:14:06.571] [Client thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[13Dec2019 09:14:25.939] [Client thread/WARN] [net.minecraft.client.GameSettings/]: Skipping bad option: lastServer:
-[13Dec2019 09:14:25.993] [Client thread/INFO] [net.minecraft.client.Minecraft/]: LWJGL Version: 3.2.2 build 10
-[13Dec2019 09:14:28.685] [modloading-worker-2/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 28.1.61, for MC 1.14.4 with MCP 20190829.143755
-[13Dec2019 09:14:28.685] [modloading-worker-2/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v28.1.61 Initialized
-[13Dec2019 09:14:29.078] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering Blocks
-[13Dec2019 09:14:29.089] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering Items
-[13Dec2019 09:14:29.089] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering BlockItems
-[13Dec2019 09:14:29.099] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering TileEntities
-[13Dec2019 09:14:29.119] [Client thread/WARN] [net.minecraft.entity.EntityType/]: No data fixer registered for entity weirdmob
-[13Dec2019 09:14:29.124] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering Containers
-[13Dec2019 09:14:32.004] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[13Dec2019 09:14:32.207] [Thread-1/FATAL] [net.minecraftforge.common.ForgeConfig/CORE]: Forge config just got changed on the file system!
-[13Dec2019 09:14:34.509] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[13Dec2019 09:14:34.600] [Forge Version Check/WARN] [net.minecraftforge.fml.VersionChecker/]: Failed to process update information
-java.net.UnknownHostException: files.minecraftforge.net
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184) ~[?:1.8.0_231]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_231]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_231]
-	at java.net.Socket.connect(Socket.java:606) ~[?:1.8.0_231]
-	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666) ~[?:1.8.0_231]
-	at sun.security.ssl.BaseSSLSocketImpl.connect(BaseSSLSocketImpl.java:173) ~[?:1.8.0_231]
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[?:1.8.0_231]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[?:1.8.0_231]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1570) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498) ~[?:1.8.0_231]
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:352) ~[?:1.8.0_231]
-	at net.minecraftforge.fml.VersionChecker$1.openUrlStream(VersionChecker.java:173) ~[?:?]
-	at net.minecraftforge.fml.VersionChecker$1.process(VersionChecker.java:206) ~[?:?]
-	at java.lang.Iterable.forEach(Iterable.java:75) [?:1.8.0_231]
-	at net.minecraftforge.fml.VersionChecker$1.run(VersionChecker.java:157) [?:?]
-[13Dec2019 09:14:38.423] [Server-Worker-7/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'theholycollection:blockstates/fancyblock.json' missing model for variant: 'theholycollection:fancyblock#'
-[13Dec2019 09:14:38.424] [Server-Worker-7/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'theholycollection:blockstates/fancyblock.json' in resourcepack: 'Mod Resources': com.google.gson.stream.MalformedJsonException: Expected name at line 4 column 4 path $.variants.
-[13Dec2019 09:14:39.732] [Server-Worker-7/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'theholycollection:fancyblock#inventory' referenced from: theholycollection:fancyblock#inventory: java.io.FileNotFoundException: theholycollection:models/item/fancyblock.json
-[13Dec2019 09:14:41.637] [Client thread/WARN] [net.minecraft.client.GameSettings/]: Skipping bad option: lastServer:
-[13Dec2019 09:14:41.790] [Client thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[13Dec2019 09:14:41.792] [Client thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[13Dec2019 09:14:42.200] [Client thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512 textures-atlas
-[13Dec2019 09:14:43.318] [Client thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256 textures/particle-atlas
-[13Dec2019 09:14:43.319] [Client thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256 textures/painting-atlas
-[13Dec2019 09:14:43.319] [Client thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128 textures/mob_effect-atlas
-[13Dec2019 09:14:52.379] [Client thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[13Dec2019 09:14:52.380] [Client thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[13Dec2019 09:14:52.382] [Client thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[13Dec2019 09:14:52.384] [Client thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[13Dec2019 09:14:52.385] [Client thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[13Dec2019 09:14:52.603] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.14.4
-[13Dec2019 09:14:52.604] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Generating keypair
-[13Dec2019 09:14:52.745] [Thread-1/FATAL] [net.minecraftforge.common.ForgeConfig/CORE]: Forge config just got changed on the file system!
-[13Dec2019 09:14:52.876] [Server thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this SERVER instance
-[13Dec2019 09:14:53.218] [Server thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar, main
-[13Dec2019 09:14:54.698] [Server thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 6 recipes
-[13Dec2019 09:14:56.557] [Server thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 811 advancements
-[13Dec2019 09:14:57.260] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[13Dec2019 09:14:59.397] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[13Dec2019 09:14:59.397] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[13Dec2019 09:14:59.397] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[13Dec2019 09:14:59.398] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[13Dec2019 09:14:59.398] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[13Dec2019 09:14:59.830] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 18%
-[13Dec2019 09:15:03.113] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[13Dec2019 09:15:03.113] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[13Dec2019 09:15:03.113] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[13Dec2019 09:15:03.113] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[13Dec2019 09:15:03.114] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[13Dec2019 09:15:03.114] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[13Dec2019 09:15:03.414] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[13Dec2019 09:15:03.812] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 95%
-[13Dec2019 09:15:04.344] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 95%
-[13Dec2019 09:15:04.812] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 96%
-[13Dec2019 09:15:05.310] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 97%
-[13Dec2019 09:15:05.812] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 99%
-[13Dec2019 09:15:05.845] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 8563 ms
-[13Dec2019 09:15:07.372] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[13Dec2019 09:15:07.373] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[13Dec2019 09:15:09.458] [Client thread/WARN] [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService/]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@7eeabaf3[id=380df991-f603-344c-a090-369bad2a924a,name=Dev,properties={},legacy=false]
-com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:85) ~[authlib-1.5.25.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:180) ~[authlib-1.5.25.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:173) ~[authlib-1.5.25.jar:?]
-	at net.minecraft.client.Minecraft.launchIntegratedServer(Minecraft.java:1637) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214443_e(WorldSelectionList.java:332) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.gui.screen.WorldSelectionList$Entry.func_214438_a(WorldSelectionList.java:255) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at java.util.Optional.ifPresent(Optional.java:159) ~[?:1.8.0_231]
-	at net.minecraft.client.gui.screen.WorldSelectionScreen.lambda$init$3(WorldSelectionScreen.java:50) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.gui.widget.button.Button.onPress(Button.java:16) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.gui.widget.button.AbstractButton.onClick(AbstractButton.java:17) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.gui.widget.Widget.mouseClicked(Widget.java:136) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.gui.INestedGuiEventHandler.mouseClicked(INestedGuiEventHandler.java:31) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.lambda$mouseButtonCallback$0(MouseHelper.java:87) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.gui.screen.Screen.wrapScreenError(Screen.java:441) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.MouseHelper.mouseButtonCallback(MouseHelper.java:85) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:36) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.2.2.jar:build 10]
-	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3101) ~[lwjgl-glfw-3.2.2.jar:build 10]
-	at net.minecraft.client.MainWindow.poll(MainWindow.java:403) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.MainWindow.update(MainWindow.java:273) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.Minecraft.updateDisplay(Minecraft.java:982) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:946) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:384) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:128) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_231]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_231]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_231]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_231]
-	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:55) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-4.1.0.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-4.1.0.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-4.1.0.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-4.1.0.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-4.1.0.jar:?]
-	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:101) [forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?]
-Caused by: java.net.UnknownHostException: sessionserver.mojang.com
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184) ~[?:1.8.0_231]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_231]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_231]
-	at java.net.Socket.connect(Socket.java:606) ~[?:1.8.0_231]
-	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666) ~[?:1.8.0_231]
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[?:1.8.0_231]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[?:1.8.0_231]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1205) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1570) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:268) ~[?:1.8.0_231]
-	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:130) ~[authlib-1.5.25.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:66) ~[authlib-1.5.25.jar:?]
-	... 34 more
-[13Dec2019 09:15:09.608] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
-[13Dec2019 09:15:10.278] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:6883595c] logged in with entity id 250 at (132.30000001192093, 77.0, -233.42113585281948)
-[13Dec2019 09:15:10.322] [Client thread/ERROR] [net.minecraftforge.fml.network.simple.IndexedMessageCodec/SIMPLENET]: Received empty payload
-[13Dec2019 09:15:10.338] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[13Dec2019 09:15:10.941] [Server thread/ERROR] [net.minecraftforge.fml.network.simple.IndexedMessageCodec/SIMPLENET]: Received empty payload
-[13Dec2019 09:15:10.942] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[13Dec2019 09:15:10.953] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[13Dec2019 09:15:11.249] [Client thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 8 advancements
-[13Dec2019 09:15:11.752] [pool-3-thread-1/WARN] [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService/]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@7619592d[id=380df991-f603-344c-a090-369bad2a924a,name=Dev,properties={},legacy=false]
-com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:85) ~[authlib-1.5.25.jar:?]
+[14Dec2019 18:54:10.321] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20190829.143755, --fml.mcVersion, 1.14.4, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 28.1.61, --version, MOD_DEV, --assetIndex, 1.14, --assetsDir, D:\Gradle\caches\forge_gradle\assets, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[14Dec2019 18:54:10.324] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 4.1.0+62+5bfa59b starting: java version 1.8.0_231 by Oracle Corporation
+[14Dec2019 18:54:10.945] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[14Dec2019 18:54:11.740] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, D:\Gradle\caches\forge_gradle\assets, --assetIndex, 1.14, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[14Dec2019 18:54:13.524] [Client thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[14Dec2019 18:54:22.943] [Client thread/WARN] [net.minecraft.client.GameSettings/]: Skipping bad option: lastServer:
+[14Dec2019 18:54:22.978] [Client thread/INFO] [net.minecraft.client.Minecraft/]: LWJGL Version: 3.2.2 build 10
+[14Dec2019 18:54:23.991] [modloading-worker-2/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 28.1.61, for MC 1.14.4 with MCP 20190829.143755
+[14Dec2019 18:54:23.991] [modloading-worker-2/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v28.1.61 Initialized
+[14Dec2019 18:54:24.320] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering Blocks
+[14Dec2019 18:54:24.325] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering Items
+[14Dec2019 18:54:24.325] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering BlockItems
+[14Dec2019 18:54:24.328] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering TileEntities
+[14Dec2019 18:54:24.335] [Client thread/WARN] [net.minecraft.entity.EntityType/]: No data fixer registered for entity weirdmob
+[14Dec2019 18:54:24.337] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering Containers
+[14Dec2019 18:54:25.698] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[14Dec2019 18:54:27.395] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[14Dec2019 18:54:28.551] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 28.1.61 Target: 28.1.106
+[14Dec2019 18:54:29.401] [Server-Worker-7/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'theholycollection:blockstates/fancyblock.json' missing model for variant: 'theholycollection:fancyblock#'
+[14Dec2019 18:54:29.401] [Server-Worker-7/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'theholycollection:blockstates/fancyblock.json' in resourcepack: 'Mod Resources': com.google.gson.stream.MalformedJsonException: Expected name at line 4 column 4 path $.variants.
+[14Dec2019 18:54:29.857] [Server-Worker-7/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Unable to load model: 'theholycollection:fancyblock#inventory' referenced from: theholycollection:fancyblock#inventory: java.io.FileNotFoundException: theholycollection:models/item/fancyblock.json
+[14Dec2019 18:54:30.837] [Client thread/WARN] [net.minecraft.client.GameSettings/]: Skipping bad option: lastServer:
+[14Dec2019 18:54:30.842] [Client thread/WARN] [net.minecraft.client.resources.Locale/]: Skipped language file: theholycollection:lang/en_us.json (com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Expected name at line 5 column 23 path $._comment)
+[14Dec2019 18:54:30.913] [Client thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[14Dec2019 18:54:30.914] [Client thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[14Dec2019 18:54:31.075] [Client thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512 textures-atlas
+[14Dec2019 18:54:31.658] [Client thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256 textures/particle-atlas
+[14Dec2019 18:54:31.660] [Client thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256 textures/painting-atlas
+[14Dec2019 18:54:31.660] [Client thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128 textures/mob_effect-atlas
+[14Dec2019 18:54:32.675] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[14Dec2019 18:55:36.639] [Client thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[14Dec2019 18:55:36.640] [Client thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[14Dec2019 18:55:36.640] [Client thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[14Dec2019 18:55:36.641] [Client thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[14Dec2019 18:55:36.641] [Client thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[14Dec2019 18:55:36.751] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.14.4
+[14Dec2019 18:55:36.751] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Generating keypair
+[14Dec2019 18:55:36.886] [Server thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this SERVER instance
+[14Dec2019 18:55:37.020] [Server thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar, main
+[14Dec2019 18:55:37.859] [Server thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 6 recipes
+[14Dec2019 18:55:38.682] [Server thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 811 advancements
+[14Dec2019 18:55:39.195] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[14Dec2019 18:55:39.830] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[14Dec2019 18:55:39.830] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
+[14Dec2019 18:55:41.497] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
+[14Dec2019 18:55:41.497] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
+[14Dec2019 18:55:41.497] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
+[14Dec2019 18:55:41.812] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
+[14Dec2019 18:55:42.012] [Client thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 2815 ms
+[14Dec2019 18:55:42.361] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[14Dec2019 18:55:42.361] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14Dec2019 18:55:45.039] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
+[14Dec2019 18:55:45.419] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:dcc57e0f] logged in with entity id 204 at (-105.48550498262888, 63.0, -54.228741126028524)
+[14Dec2019 18:55:45.446] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[14Dec2019 18:55:45.447] [Client thread/ERROR] [net.minecraftforge.fml.network.simple.IndexedMessageCodec/SIMPLENET]: Received empty payload
+[14Dec2019 18:55:45.799] [Server thread/ERROR] [net.minecraftforge.fml.network.simple.IndexedMessageCodec/SIMPLENET]: Received empty payload
+[14Dec2019 18:55:45.828] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[14Dec2019 18:55:45.835] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[14Dec2019 18:55:45.900] [Client thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 31 advancements
+[14Dec2019 18:55:46.901] [pool-3-thread-1/WARN] [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService/]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@16cb81b8[id=380df991-f603-344c-a090-369bad2a924a,name=Dev,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:79) ~[authlib-1.5.25.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:180) ~[authlib-1.5.25.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:60) ~[authlib-1.5.25.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:57) ~[authlib-1.5.25.jar:?]
@@ -173,38 +79,16 @@ com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_231]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_231]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_231]
-Caused by: java.net.UnknownHostException: sessionserver.mojang.com
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184) ~[?:1.8.0_231]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_231]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_231]
-	at java.net.Socket.connect(Socket.java:606) ~[?:1.8.0_231]
-	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666) ~[?:1.8.0_231]
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[?:1.8.0_231]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[?:1.8.0_231]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1205) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1570) ~[?:1.8.0_231]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498) ~[?:1.8.0_231]
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:268) ~[?:1.8.0_231]
-	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:130) ~[authlib-1.5.25.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:66) ~[authlib-1.5.25.jar:?]
-	... 19 more
-[13Dec2019 09:15:13.280] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 4109ms or 82 ticks behind
-[13Dec2019 09:15:20.342] [Client thread/WARN] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Unable to play empty soundEvent: minecraft:entity.salmon.ambient
-[13Dec2019 09:17:05.471] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[13Dec2019 09:17:05.479] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[13Dec2019 09:17:06.997] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
-[13Dec2019 09:17:06.997] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[13Dec2019 09:17:07.005] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
-[13Dec2019 09:17:07.034] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[13Dec2019 09:17:07.035] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[13Dec2019 09:17:07.035] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[13Dec2019 09:17:07.035] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[13Dec2019 09:17:07.525] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[13Dec2019 09:17:07.544] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[13Dec2019 09:17:08.401] [Client thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[14Dec2019 18:56:05.488] [Client thread/WARN] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Unable to play empty soundEvent: minecraft:entity.salmon.ambient
+[14Dec2019 18:56:17.579] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[14Dec2019 18:56:17.582] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[14Dec2019 18:56:18.208] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
+[14Dec2019 18:56:18.208] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[14Dec2019 18:56:18.212] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
+[14Dec2019 18:56:18.234] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[14Dec2019 18:56:18.234] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[14Dec2019 18:56:18.234] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[14Dec2019 18:56:18.234] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
+[14Dec2019 18:56:18.479] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[14Dec2019 18:56:18.487] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[14Dec2019 18:56:19.183] [Client thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

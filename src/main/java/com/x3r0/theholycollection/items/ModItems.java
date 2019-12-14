@@ -11,4 +11,7 @@ public class ModItems {
 
     @ObjectHolder("theholycollection:watersplitteritem")
     public static WaterSplitterItem WATERSPLITERITEM;
+
+    @ObjectHolder("theholycollection:frostbootsitem")
+    public static FrostBootsItem FROSTBOOTSITEM;
 }
