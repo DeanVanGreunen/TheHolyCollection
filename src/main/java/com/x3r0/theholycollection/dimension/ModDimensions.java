@@ -9,7 +9,7 @@ public class ModDimensions {
 
     public static final ResourceLocation DIMENSION_ID = new ResourceLocation(TheHolyCollection.MODID, "dimension");
 
-    @ObjectHolder("mytutorial:dimension")
+    @ObjectHolder("theholycollection:dimension")
     public static ModDimension DIMENSION;
 
     public static DimensionType DIMENSION_TYPE;

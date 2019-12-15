@@ -7,6 +7,7 @@ import com.x3r0.theholycollection.blocks.firstblock.FirstBlock;
 import com.x3r0.theholycollection.blocks.firstblock.FirstBlockContainer;
 import com.x3r0.theholycollection.blocks.firstblock.FirstBlockTile;
 import com.x3r0.theholycollection.blocks.ModBlocks;
+import com.x3r0.theholycollection.dimension.TutorialModDimension;
 import com.x3r0.theholycollection.entities.WeirdMobEntity;
 import com.x3r0.theholycollection.items.FirstItem;
 import com.x3r0.theholycollection.items.FrostBootsItem;
@@ -28,6 +29,7 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.ModDimension;
 import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -42,6 +44,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import static com.x3r0.theholycollection.dimension.ModDimensions.DIMENSION_ID;
 
 @Mod("theholycollection")
 public class TheHolyCollection {
@@ -77,20 +81,13 @@ public class TheHolyCollection {
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
-        /*InterModComms.sendTo("theholycollection", "helloworld", () -> {
-            return "Hello world";
-        });*/
     }
 
     private void processIMC(final InterModProcessEvent event) {
-        /*LOGGER.info("Got IMC {}", event.getIMCStream().
-                map(m -> m.getMessageSupplier().get()).
-                collect(Collectors.toList()));*/
     }
 
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
-        //LOGGER.info("HELLO from server starting");
     }
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -139,6 +136,11 @@ public class TheHolyCollection {
             .size(1,1)
             .setShouldReceiveVelocityUpdates(false)
             .build("weirdmob").setRegistryName(TheHolyCollection.MODID, "weirdmob"));
+        }
+
+        @SubscribeEvent
+        public static void registerModDimensions(final RegistryEvent.Register<ModDimension> event) {
+            event.getRegistry().register(new TutorialModDimension().setRegistryName(DIMENSION_ID));
         }
     }
 }

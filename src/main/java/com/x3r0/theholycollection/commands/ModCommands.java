@@ -8,11 +8,12 @@ import net.minecraft.command.CommandSource;
 import net.minecraft.command.Commands;
 
 public class ModCommands {
-    public static void register(CommandDispatcher<CommandSource> dispatcher){
+    public static void register(CommandDispatcher<CommandSource> dispatcher) {
         LiteralCommandNode<CommandSource> cmdTut = dispatcher.register(
                 Commands.literal(TheHolyCollection.MODID)
-                    .then(CommandTest.register(dispatcher))
-                    .then(CommandSpawner.register(dispatcher))
+                        .then(CommandTest.register(dispatcher))
+                        .then(CommandTpDim.register(dispatcher))
+                        .then(CommandSpawner.register(dispatcher))
         );
 
         dispatcher.register(Commands.literal("tut").redirect(cmdTut));
