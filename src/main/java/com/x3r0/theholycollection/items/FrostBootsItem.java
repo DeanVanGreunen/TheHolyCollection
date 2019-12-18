@@ -4,6 +4,7 @@ import com.google.common.collect.Multimap;
 import com.x3r0.theholycollection.TheHolyCollection;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.item.ItemEntity;
@@ -11,18 +12,24 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
+import net.minecraftforge.common.util.*;
+import net.minecraftforge.common.*;
+
+
+import javax.annotation.Nullable;
 
 public class FrostBootsItem extends ArmorItem {
     private BlockState TransformBlockTo = Blocks.FROSTED_ICE.getDefaultState();
-
     public FrostBootsItem() {
         super(
                 ArmorMaterial.DIAMOND,
@@ -37,7 +44,13 @@ public class FrostBootsItem extends ArmorItem {
         SetIceBelowPlayer(player.getEntityWorld().getWorld(), player.getPosition());
     }
 
-    public void SetIceBelowPlayer(World world, BlockPos p) {
+    @Nullable
+    @Override
+    public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
+        return "theholycollection:textures/armor/frostbootsitem.png";
+    }
+
+    private void SetIceBelowPlayer(World world, BlockPos p) {
 
         int px = p.getX();
         int py = p.getY();
@@ -63,7 +76,7 @@ public class FrostBootsItem extends ArmorItem {
         MakeWaterIce(p_9, world);
     }
 
-    public void MakeWaterIce(BlockPos pos, World world) {
+    private void MakeWaterIce(BlockPos pos, World world) {
         Chunk chunk = world.getChunkAt(pos);
         IFluidState f_state = chunk.getFluidState(pos);
         BlockState state = world.getBlockState(pos);
