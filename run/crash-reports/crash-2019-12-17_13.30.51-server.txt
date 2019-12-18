@@ -1,0 +1,101 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 2019/12/17 1:30 PM
+Description: Ticking player
+
+java.lang.NullPointerException: Ticking player
+	at com.x3r0.theholycollection.items.FrostBootsItem.onArmorTick(FrostBootsItem.java:37) ~[?:?] {re:classloading}
+	at net.minecraftforge.common.extensions.IForgeItemStack.onArmorTick(IForgeItemStack.java:289) ~[?:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerInventory.lambda$tick$0(PlayerInventory.java:296) ~[?:?] {re:classloading}
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:1.8.0_231] {}
+	at net.minecraft.entity.player.PlayerInventory.tick(PlayerInventory.java:296) ~[?:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerEntity.livingTick(PlayerEntity.java:518) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2187) ~[?:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerEntity.tick(PlayerEntity.java:235) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.player.ServerPlayerEntity.playerTick(ServerPlayerEntity.java:381) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.network.play.ServerPlayNetHandler.tick(ServerPlayNetHandler.java:183) ~[?:?] {re:classloading}
+	at net.minecraft.network.NetworkManager.tick(NetworkManager.java:245) ~[?:?] {re:classloading}
+	at net.minecraft.network.NetworkSystem.tick(NetworkSystem.java:148) ~[?:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:882) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:800) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:646) [?:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_231] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.x3r0.theholycollection.items.FrostBootsItem.onArmorTick(FrostBootsItem.java:37)
+	at net.minecraftforge.common.extensions.IForgeItemStack.onArmorTick(IForgeItemStack.java:289)
+	at net.minecraft.entity.player.PlayerInventory.lambda$tick$0(PlayerInventory.java:296)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at net.minecraft.entity.player.PlayerInventory.tick(PlayerInventory.java:296)
+	at net.minecraft.entity.player.PlayerEntity.livingTick(PlayerEntity.java:518)
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2187)
+	at net.minecraft.entity.player.PlayerEntity.tick(PlayerEntity.java:235)
+
+-- Player being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.entity.player.ServerPlayerEntity)
+	Entity ID: 229
+	Entity Name: Dev
+	Entity's Exact location: -99.28, 64.00, -37.66
+	Entity's Block location: World: (-100,64,-38), Chunk: (at 12,4,10 in -7,-3; contains blocks -112,0,-48 to -97,255,-33), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.entity.player.ServerPlayerEntity.playerTick(ServerPlayerEntity.java:381)
+	at net.minecraft.network.play.ServerPlayNetHandler.tick(ServerPlayNetHandler.java:183)
+	at net.minecraft.network.NetworkManager.tick(NetworkManager.java:245)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.NetworkManager@72ced9cd
+Stacktrace:
+	at net.minecraft.network.NetworkSystem.tick(NetworkSystem.java:148)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:882)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:800)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:646)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.14.4
+	Minecraft Version ID: 1.14.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_231, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 640427768 bytes (610 MB) / 2006450176 bytes (1913 MB) up to 3771203584 bytes (3596 MB)
+	CPUs: 12
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 4.1.0+62+5bfa59b
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/eventbus-1.0.0-service.jar eventbus PLUGINSERVICE 
+		/forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-1.0.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 28.1
+	Forge: net.minecraftforge:28.1.61
+	FML Language Providers: 
+		javafml@28.1
+		minecraft@1
+	Mod List: 
+		forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar Forge {forge@28.1.61 DONE}
+		main The Holy Collection {theholycollection@NONE DONE}
+		client-extra.jar Minecraft {minecraft@1.14.4 DONE}
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/229, l='New World', x=-99.28, y=64.00, z=-37.66]]
+	Data Packs: vanilla, mod:forge, mod:theholycollection
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

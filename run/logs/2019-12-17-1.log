@@ -1,0 +1,15 @@
+[17Dec2019 14:06:09.562] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20190829.143755, --fml.mcVersion, 1.14.4, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 28.1.61, --version, MOD_DEV, --assetIndex, 1.14, --assetsDir, D:\Gradle\caches\forge_gradle\assets, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[17Dec2019 14:06:09.565] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 4.1.0+62+5bfa59b starting: java version 1.8.0_231 by Oracle Corporation
+[17Dec2019 14:06:10.175] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[17Dec2019 14:06:10.943] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, D:\Gradle\caches\forge_gradle\assets, --assetIndex, 1.14, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[17Dec2019 14:06:12.699] [Client thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[17Dec2019 14:06:22.955] [Client thread/WARN] [net.minecraft.client.GameSettings/]: Skipping bad option: lastServer:
+[17Dec2019 14:06:22.988] [Client thread/INFO] [net.minecraft.client.Minecraft/]: LWJGL Version: 3.2.2 build 10
+[17Dec2019 14:06:23.824] [modloading-worker-2/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 28.1.61, for MC 1.14.4 with MCP 20190829.143755
+[17Dec2019 14:06:23.824] [modloading-worker-2/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v28.1.61 Initialized
+[17Dec2019 14:06:23.975] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering Blocks
+[17Dec2019 14:06:23.980] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering Items
+[17Dec2019 14:06:23.980] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering BlockItems
+[17Dec2019 14:06:23.986] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering TileEntities
+[17Dec2019 14:06:23.994] [Client thread/WARN] [net.minecraft.entity.EntityType/]: No data fixer registered for entity weirdmob
+[17Dec2019 14:06:23.995] [Client thread/INFO] [com.x3r0.theholycollection.TheHolyCollection/]: Registering Containers

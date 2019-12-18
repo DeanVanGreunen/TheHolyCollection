@@ -34,9 +34,7 @@ public class FrostBootsItem extends ArmorItem {
 
     @Override
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
-        if (!world.isRemote) {
-            SetIceBelowPlayer(world, player.getPosition());
-        }
+        SetIceBelowPlayer(player.getEntityWorld().getWorld(), player.getPosition());
     }
 
     public void SetIceBelowPlayer(World world, BlockPos p) {
@@ -45,15 +43,15 @@ public class FrostBootsItem extends ArmorItem {
         int py = p.getY();
         int pz = p.getZ();
 
-        BlockPos p_1 = p.add(px - 1, py + 0, pz + 1);
-        BlockPos p_2 = p.add(px + 0, py + 0, pz + 1);
-        BlockPos p_3 = p.add(px + 1, py + 0, pz + 1);
-        BlockPos p_4 = p.add(px - 1, py + 0, pz + 0);
-        BlockPos p_5 = p.add(px + 0, py + 0, pz + 0);
-        BlockPos p_6 = p.add(px + 1, py, pz + 0);
-        BlockPos p_7 = p.add(px - 1, py, pz - 1);
-        BlockPos p_8 = p.add(px + 0, py, pz - 1);
-        BlockPos p_9 = p.add(px + 1, py, pz - 1);
+        BlockPos p_1 = p.add( - 1, - 1, 1);
+        BlockPos p_2 = p.add( + 0, - 1, 1);
+        BlockPos p_3 = p.add(+ 1, - 1, 1);
+        BlockPos p_4 = p.add(- 1, - 1, 0);
+        BlockPos p_5 = p.add( 0, - 1, 0);
+        BlockPos p_6 = p.add( 1, - 1, 0);
+        BlockPos p_7 = p.add(- 1, - 1, - 1);
+        BlockPos p_8 = p.add(0, - 1, 1);
+        BlockPos p_9 = p.add( 1, - 1, - 1);
         MakeWaterIce(p_1, world);
         MakeWaterIce(p_2, world);
         MakeWaterIce(p_3, world);
@@ -66,17 +64,11 @@ public class FrostBootsItem extends ArmorItem {
     }
 
     public void MakeWaterIce(BlockPos pos, World world) {
-        System.out.println("########################");
-        System.out.println("# X: " + pos.getX());
-        System.out.println("# Y: " + pos.getX());
-        System.out.println("# Z: " + pos.getX());
-        System.out.println("########################");
         Chunk chunk = world.getChunkAt(pos);
         IFluidState f_state = chunk.getFluidState(pos);
         BlockState state = world.getBlockState(pos);
         if (state.getBlock() == Blocks.WATER || (f_state.isTagged(FluidTags.WATER) || f_state.isTagged(FluidTags.LAVA))){
-            world.setBlockState(pos, TransformBlockTo, 3);
-            world.markAndNotifyBlock(pos, chunk, state, TransformBlockTo, 3);
+            world.setBlockState(pos, TransformBlockTo, 0);
         }
         world.markChunkDirty(pos, null);
     }

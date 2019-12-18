@@ -27,8 +27,6 @@ public class WaterSplitterItem extends Item {
         setRegistryName("watersplitteritem");
     }
 
-
-    //TODO: Complete with directions, etc...
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         World world = worldIn;
@@ -48,6 +46,7 @@ public class WaterSplitterItem extends Item {
                 RemoveWaterWest(world, blockpos);
                 break;
         }
+        playerIn.addItemStackToInventory(new ItemStack(ModItems.WATERSPLITERITEM));
         return new ActionResult(ActionResultType.PASS, playerIn.getActiveItemStack());
     }
 
