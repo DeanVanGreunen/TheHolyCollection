@@ -5,7 +5,7 @@ Time: 2019/12/12 7:27 PM
 Description: Unexpected error
 
 java.lang.ClassCastException: net.minecraft.block.AirBlock cannot be cast to net.minecraft.block.IBucketPickupHandler
-	at com.x3r0.theholycollection.items.WaterSplitterItem.onItemRightClick(WaterSplitterItem.java:47) ~[main/:?] {re:classloading}
+	at com.x3r0.theholycollection.items.StaffOfMosesItem.onItemRightClick(WaterSplitterItem.java:47) ~[main/:?] {re:classloading}
 	at net.minecraft.item.ItemStack.useItemRightClick(ItemStack.java:201) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?] {re:classloading}
 	at net.minecraft.client.multiplayer.PlayerController.processRightClick(PlayerController.java:337) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
 	at net.minecraft.client.Minecraft.rightClickMouse(Minecraft.java:1305) ~[forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
@@ -33,7 +33,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Client thread
 Stacktrace:
-	at com.x3r0.theholycollection.items.WaterSplitterItem.onItemRightClick(WaterSplitterItem.java:47)
+	at com.x3r0.theholycollection.items.StaffOfMosesItem.onItemRightClick(WaterSplitterItem.java:47)
 	at net.minecraft.item.ItemStack.useItemRightClick(ItemStack.java:201)
 	at net.minecraft.client.multiplayer.PlayerController.processRightClick(PlayerController.java:337)
 	at net.minecraft.client.Minecraft.rightClickMouse(Minecraft.java:1305)

@@ -9,9 +9,12 @@ public class ModItems {
     @ObjectHolder("theholycollection:weirdmob_egg")
     public static WeirdMobEggItem WEIRDMOB_EGG;
 
-    @ObjectHolder("theholycollection:watersplitteritem")
-    public static WaterSplitterItem WATERSPLITERITEM;
+    @ObjectHolder("theholycollection:staffofmosesitem")
+    public static StaffOfMosesItem STAFFOFMOSESITEM;
 
     @ObjectHolder("theholycollection:frostbootsitem")
     public static FrostBootsItem FROSTBOOTSITEM;
+
+    @ObjectHolder("theholycollection:handsofjesusitem")
+    public static HandsOfJesusItem HANDSOFJESUSITEM;
 }

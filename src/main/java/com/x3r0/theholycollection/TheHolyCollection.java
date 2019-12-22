@@ -9,23 +9,16 @@ import com.x3r0.theholycollection.blocks.firstblock.FirstBlockTile;
 import com.x3r0.theholycollection.blocks.ModBlocks;
 import com.x3r0.theholycollection.dimension.TutorialModDimension;
 import com.x3r0.theholycollection.entities.WeirdMobEntity;
-import com.x3r0.theholycollection.items.FirstItem;
-import com.x3r0.theholycollection.items.FrostBootsItem;
-import com.x3r0.theholycollection.items.WaterSplitterItem;
-import com.x3r0.theholycollection.items.WeirdMobEggItem;
+import com.x3r0.theholycollection.items.*;
 import com.x3r0.theholycollection.setup.ClientProxy;
 import com.x3r0.theholycollection.setup.IProxy;
 import com.x3r0.theholycollection.setup.ModSetup;
 import com.x3r0.theholycollection.setup.ServerProxy;
 import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
-import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.SpawnEggItem;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.MinecraftForge;
@@ -108,8 +101,9 @@ public class TheHolyCollection {
             event.getRegistry().register(new FirstBlockItem());
             event.getRegistry().register(new FirstItem());
             event.getRegistry().register(new WeirdMobEggItem());
-            event.getRegistry().register(new WaterSplitterItem());
+            event.getRegistry().register(new StaffOfMosesItem());
             event.getRegistry().register(new FrostBootsItem());
+            event.getRegistry().register(new HandsOfJesusItem());
         }
 
         @SubscribeEvent

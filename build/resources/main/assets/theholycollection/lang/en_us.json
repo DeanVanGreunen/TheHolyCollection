@@ -3,8 +3,9 @@
   "block.theholycollection.firstblock": "First Block",
 
   "_comment": "Items",
-  "item.theholycollection.watersplitteritem": "Holy Water Splitter Item",
+  "item.theholycollection.watersplitteritem": "Holy Water Splitter",
   "item.theholycollection.frostbootsitem": "Holy Frost Boot",
+  "item.theholycollection.handsofjesusitem": "Holy Hands of Jesus",
 
   "_comment": "Creative Tabs",
   "itemGroup.theholycollection": "The Holy Collection",
