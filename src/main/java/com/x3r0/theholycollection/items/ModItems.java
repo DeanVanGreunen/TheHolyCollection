@@ -17,4 +17,7 @@ public class ModItems {
 
     @ObjectHolder("theholycollection:handsofjesusitem")
     public static HandsOfJesusItem HANDSOFJESUSITEM;
+
+    @ObjectHolder("theholycollection:snakestaffitem")
+    public static SnakeStaffItem SNAKESTAFFITEM;
 }
