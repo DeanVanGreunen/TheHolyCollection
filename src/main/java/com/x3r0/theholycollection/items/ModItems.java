@@ -3,11 +3,11 @@ package com.x3r0.theholycollection.items;
 import net.minecraftforge.registries.ObjectHolder;
 
 public class ModItems {
-    @ObjectHolder("theholycollection:firstitem")
-    public static FirstItem FIRSTITEM;
+    //@ObjectHolder("theholycollection:firstitem")
+    //public static FirstItem FIRSTITEM;
 
-    @ObjectHolder("theholycollection:weirdmob_egg")
-    public static WeirdMobEggItem WEIRDMOB_EGG;
+    //@ObjectHolder("theholycollection:weirdmob_egg")
+    //public static WeirdMobEggItem WEIRDMOB_EGG;
 
     @ObjectHolder("theholycollection:staffofmosesitem")
     public static StaffOfMosesItem STAFFOFMOSESITEM;
@@ -18,6 +18,6 @@ public class ModItems {
     @ObjectHolder("theholycollection:handsofjesusitem")
     public static HandsOfJesusItem HANDSOFJESUSITEM;
 
-    @ObjectHolder("theholycollection:snakestaffitem")
-    public static SnakeStaffItem SNAKESTAFFITEM;
+    //@ObjectHolder("theholycollection:snakestaffitem")
+    //public static SnakeStaffItem SNAKESTAFFITEM;
 }

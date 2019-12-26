@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures":{
+    "north": "theholycollection:block/protectionblock_front",
+    "south": "theholycollection:block/protectionblock",
+    "east": "theholycollection:block/protectionblock",
+    "west": "theholycollection:block/protectionblock",
+    "up": "theholycollection:block/protectionblock",
+    "down": "theholycollection:block/protectionblock"
+  }
+}

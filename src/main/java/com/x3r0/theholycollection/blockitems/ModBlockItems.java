@@ -8,4 +8,7 @@ public class ModBlockItems {
 
     @ObjectHolder("theholycollection:fancyblock")
     public static FancyBlockItem FANCYBLOCKITEM;
+
+    @ObjectHolder("theholycollection:protectionblock")
+    public static ProtectionBlockItem PROTECTIONBLOCKITEM;
 }

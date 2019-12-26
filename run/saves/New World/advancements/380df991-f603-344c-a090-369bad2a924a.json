@@ -1,151 +1,79 @@
 {
-  "minecraft:recipes/misc/black_dye": {
+  "minecraft:recipes/tools/fishing_rod": {
     "criteria": {
-      "has_ink_sac": "2019-12-17 14:07:26 +0200"
+      "has_string": "2019-12-26 00:05:08 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/campfire": {
+  "minecraft:recipes/combat/bow": {
     "criteria": {
-      "has_stick": "2019-12-17 14:22:11 +0200"
+      "has_string": "2019-12-26 00:05:08 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/combat/wooden_sword": {
+  "minecraft:recipes/building_blocks/white_wool_from_string": {
     "criteria": {
-      "has_stick": "2019-12-17 14:22:11 +0200"
+      "has_string": "2019-12-26 00:05:08 +0200"
     },
     "done": true
   },
-  "minecraft:story/lava_bucket": {
+  "minecraft:recipes/misc/composter": {
     "criteria": {
-      "lava_bucket": "2019-12-14 17:57:00 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/wooden_pickaxe": {
-    "criteria": {
-      "has_stick": "2019-12-17 14:22:11 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/wooden_axe": {
-    "criteria": {
-      "has_stick": "2019-12-17 14:22:11 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/dark_oak_boat": {
-    "criteria": {
-      "in_water": "2019-12-12 19:45:42 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/ladder": {
-    "criteria": {
-      "has_stick": "2019-12-17 14:22:11 +0200"
+      "has_wooden_fences": "2019-12-26 15:20:49 +0200"
     },
     "done": true
   },
   "minecraft:recipes/decorations/chest": {
     "criteria": {
-      "has_lots_of_items": "2019-12-12 19:45:27 +0200"
+      "has_lots_of_items": "2019-12-26 00:05:08 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/birch_boat": {
+  "minecraft:recipes/decorations/cartography_table": {
     "criteria": {
-      "in_water": "2019-12-12 19:45:42 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/food/cooked_salmon": {
-    "criteria": {
-      "has_salmon": "2019-12-14 17:56:10 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/tools/wooden_shovel": {
-    "criteria": {
-      "has_stick": "2019-12-17 14:22:11 +0200"
-    },
-    "done": true
-  },
-  "minecraft:story/root": {
-    "criteria": {
-      "crafting_table": "2019-12-17 14:22:24 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/acacia_boat": {
-    "criteria": {
-      "in_water": "2019-12-12 19:45:42 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/oak_boat": {
-    "criteria": {
-      "in_water": "2019-12-12 19:45:42 +0200"
+      "has_string": "2019-12-26 00:05:08 +0200"
     },
     "done": true
   },
   "minecraft:recipes/combat/crossbow": {
     "criteria": {
-      "has_stick": "2019-12-17 14:22:11 +0200"
+      "has_string": "2019-12-26 00:05:08 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/food/cooked_salmon_from_smoking": {
+  "minecraft:recipes/decorations/loom": {
     "criteria": {
-      "has_salmon": "2019-12-14 17:56:10 +0200"
+      "has_string": "2019-12-26 00:05:08 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/tools/wooden_hoe": {
+  "minecraft:recipes/redstone/sticky_piston": {
     "criteria": {
-      "has_stick": "2019-12-17 14:22:11 +0200"
+      "has_slime_ball": "2019-12-25 23:50:16 +0200"
     },
     "done": true
   },
   "minecraft:adventure/root": {
     "criteria": {
-      "killed_something": "2019-12-14 17:56:27 +0200"
+      "killed_something": "2019-12-26 14:20:31 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/jungle_boat": {
+  "minecraft:recipes/tools/lead": {
     "criteria": {
-      "in_water": "2019-12-12 19:45:42 +0200"
+      "has_slime_ball": "2019-12-25 23:50:16 +0200"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/spruce_boat": {
+  "minecraft:recipes/redstone/tripwire_hook": {
     "criteria": {
-      "in_water": "2019-12-12 19:45:42 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/food/cooked_salmon_from_campfire_cooking": {
-    "criteria": {
-      "has_salmon": "2019-12-14 17:56:10 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/brewing/cauldron": {
-    "criteria": {
-      "has_water_bucket": "2019-12-17 14:22:34 +0200"
+      "has_string": "2019-12-26 00:05:08 +0200"
     },
     "done": true
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:forest": "2019-12-12 19:44:57 +0200",
-      "minecraft:mountains": "2019-12-12 19:49:48 +0200",
-      "minecraft:birch_forest": "2019-12-17 14:22:50 +0200",
-      "minecraft:river": "2019-12-12 19:45:11 +0200",
-      "minecraft:wooded_mountains": "2019-12-18 10:43:45 +0200",
-      "minecraft:wooded_hills": "2019-12-14 17:55:49 +0200",
-      "minecraft:plains": "2019-12-12 19:45:13 +0200"
+      "minecraft:plains": "2019-12-25 22:17:03 +0200"
     },
     "done": false
   },

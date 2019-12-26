@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: TheHolyCollection
+Implementation-Version: 1.0
+Specification-Vendor: Dean Van Greunen
+Specification-Title: theholycollection
+Implementation-Timestamp: 2019-12-26T14:16:24+0200
+Specification-Version: 1
+Implementation-Vendor: Dean Van Greunen
+

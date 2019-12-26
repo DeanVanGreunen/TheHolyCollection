@@ -11,7 +11,7 @@ public class ModSetup {
     public ItemGroup itemGroup = new ItemGroup("theholycollection") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.FIRSTBLOCK);
+            return new ItemStack(ModBlocks.PROTECTIONBLOCK);
         }
     };
 

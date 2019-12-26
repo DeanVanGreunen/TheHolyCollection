@@ -1,5 +1,0 @@
-Args: "--inJar", "C:\Users\deanv\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.14.4-28.1.61\forge-1.14.4-28.1.61-injected.jar", "--outJar", "C:\Users\deanv\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3\forge-1.14.4-28.1.61_mapped_snapshot_20191020-1.14.3.jar", "--logFile", "accesstransform.log", "--atFile", "D:\Storage\Projects\TheHolyCollection\build\_atJar_-425215890_\parent_at.cfg"
-Classpath: C:\Users\deanv\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\accesstransformers\1.0.1-milestone.0.1+94458e7\accesstransformers-1.0.1-milestone.0.1+94458e7-fatjar.jar
-WorkDir: D:\Storage\Projects\TheHolyCollection\build\_atJar_-425215890_
-Main: net.minecraftforge.accesstransformer.TransformerProcessor
-====================================

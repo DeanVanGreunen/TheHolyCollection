@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ClientRegistration {
     @SubscribeEvent
     public static void onItemColor(ColorHandlerEvent.Item event){
-        event.getItemColors().register((stack, i) -> 0xff0000, ModItems.WEIRDMOB_EGG);
+        //event.getItemColors().register((stack, i) -> 0xff0000, ModItems.WEIRDMOB_EGG);
     }
 
     @SubscribeEvent
@@ -26,14 +26,14 @@ public class ClientRegistration {
         if(!event.getMap().getBasePath().equals("textures")){
             return;
         }
-        event.addSprite(new ResourceLocation(TheHolyCollection.MODID, "block/fancyblock"));
+        //event.addSprite(new ResourceLocation(TheHolyCollection.MODID, "block/fancyblock"));
     }
 
     @SubscribeEvent
     public static void onModelBake(ModelBakeEvent event){
-        event.getModelRegistry().put(new ModelResourceLocation(ModBlocks.FANCYBLOCK.getRegistryName(), ""), //standard world
-                new FancyBakedModel((DefaultVertexFormats.BLOCK)));
-        event.getModelRegistry().put(new ModelResourceLocation(ModBlocks.FANCYBLOCK.getRegistryName(), "inventory"),
-                new FancyBakedModel((DefaultVertexFormats.ITEM)));
+       // event.getModelRegistry().put(new ModelResourceLocation(ModBlocks.FANCYBLOCK.getRegistryName(), ""), //standard world
+        //        new FancyBakedModel((DefaultVertexFormats.BLOCK)));
+        //event.getModelRegistry().put(new ModelResourceLocation(ModBlocks.FANCYBLOCK.getRegistryName(), "inventory"),
+         //       new FancyBakedModel((DefaultVertexFormats.ITEM)));
     }
 }

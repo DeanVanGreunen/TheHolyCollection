@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "theholycollection:item/watersplitteritem"
+    "layer0": "theholycollection:item/staffofmosesitem"
   }
 }
